@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>TextBox.png</file>
+        <file>FOT-RodinCattleyaPro-DB.otf</file>
+        <file>button_a.png</file>
+        <file>button_b.png</file>
+        <file>button_back.png</file>
+        <file>button_lb.png</file>
+        <file>button_lt.png</file>
+        <file>button_rb.png</file>
+        <file>button_rt.png</file>
+        <file>button_start.png</file>
+        <file>button_x.png</file>
+        <file>button_y.png</file>
+        <file>Nintendo_NTLG-DB_002.ttf</file>
+    </qresource>
+</RCC>
