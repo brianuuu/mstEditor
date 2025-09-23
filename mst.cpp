@@ -764,3 +764,17 @@ void mst::ModifyEntry
     if (_id >= m_entries.size()) return;
     m_entries[_id] = _entry;
 }
+
+//-----------------------------------------------------
+// Move existing entries
+//-----------------------------------------------------
+void mst::MoveEntry
+(
+    unsigned int _from,
+    unsigned int _to
+)
+{
+    TextEntry temp = m_entries.at(_from);
+    m_entries.erase(m_entries.begin() + (int)_from);
+    m_entries.insert(m_entries.begin() + (int)_to, temp);
+}

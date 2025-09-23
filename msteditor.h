@@ -90,6 +90,7 @@ private slots:
 
     // Tree view
     void on_TW_TreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+    void on_TW_TreeWidget_itemMoved(int from, int to);
     void on_PB_SubtitleAdd_clicked();
     void on_PB_SubtitleDelete_clicked();
     void on_PB_Find_clicked();

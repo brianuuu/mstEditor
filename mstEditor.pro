@@ -26,11 +26,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         msteditor.cpp \
-    mst.cpp
+    mst.cpp \
+    mytreewidget.cpp
 
 HEADERS += \
         msteditor.h \
-    mst.h
+    mst.h \
+    mytreewidget.h
 
 FORMS += \
         msteditor.ui

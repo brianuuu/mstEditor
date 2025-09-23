@@ -1,6 +1,8 @@
 #include "msteditor.h"
 #include "ui_msteditor.h"
 
+#include "mytreewidget.h"
+
 //---------------------------------------------------------------------------
 // Constructor
 //---------------------------------------------------------------------------
@@ -657,6 +659,7 @@ void mstEditor::TW_AddOrReplaceEntry(mst::TextEntry entry, int _id)
     }
 
     item->setText(0, QString::fromStdString(entry.m_name));
+    item->setFlags(item->flags() & ~Qt::ItemIsDropEnabled);
 
     QString subtitle;
     for(unsigned int i = 0; i < entry.m_subtitles.size(); i++)
@@ -696,6 +699,33 @@ void mstEditor::on_TW_TreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int co
     }
 
     LoadSubtitle(ui->TW_TreeWidget->indexOfTopLevelItem(item));
+}
+
+//---------------------------------------------------------------------------
+// Item in tree widget reordered
+//---------------------------------------------------------------------------
+void mstEditor::on_TW_TreeWidget_itemMoved(int from, int to)
+{
+    m_mst.MoveEntry(static_cast<unsigned int>(from), static_cast<unsigned int>(to));
+
+    if (m_id >= 0)
+    {
+        if (m_id == from)
+        {
+            // moving current entry
+            m_id = to;
+        }
+        else if (from > m_id && to <= m_id)
+        {
+            // something moved to above current entry
+            m_id++;
+        }
+        else if (from < m_id && to >= m_id)
+        {
+            // something moved to below current entry
+            m_id--;
+        }
+    }
 }
 
 //---------------------------------------------------------------------------

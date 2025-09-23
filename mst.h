@@ -44,6 +44,7 @@ public:
     int AddNewEntry();
     void RemoveEntry(unsigned int _id);
     void ModifyEntry(unsigned int _id, TextEntry const& _entry);
+    void MoveEntry(unsigned int _from, unsigned int _to);
 
 private:
     // Reading from bytes

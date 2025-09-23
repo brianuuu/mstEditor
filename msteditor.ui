@@ -436,7 +436,7 @@
          </layout>
         </item>
         <item>
-         <widget class="QTreeWidget" name="TW_TreeWidget">
+         <widget class="MyTreeWidget" name="TW_TreeWidget">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
             <horstretch>0</horstretch>
@@ -453,6 +453,9 @@
            <font>
             <pointsize>8</pointsize>
            </font>
+          </property>
+          <property name="dragDropMode">
+           <enum>QAbstractItemView::InternalMove</enum>
           </property>
           <property name="alternatingRowColors">
            <bool>true</bool>
@@ -678,6 +681,13 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>mytreewidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resource.qrc"/>
  </resources>
