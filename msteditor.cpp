@@ -23,6 +23,7 @@ mstEditor::mstEditor(QWidget *parent) :
     m_stringToButton["button_rt"] = Button::RT;
     m_stringToButton["button_start"] = Button::START;
     m_stringToButton["button_back"] = Button::BACK;
+    m_stringToButton["button_dpad"] = Button::DPAD;
 
     m_buttonToCombo[Button::A] = "A Button";
     m_buttonToCombo[Button::B] = "B Button";
@@ -34,6 +35,7 @@ mstEditor::mstEditor(QWidget *parent) :
     m_buttonToCombo[Button::RT] = "Right Trigger";
     m_buttonToCombo[Button::START] = "Start Button";
     m_buttonToCombo[Button::BACK] = "Back Button";
+    m_buttonToCombo[Button::DPAD] = "D-Pad";
 
     m_buttonToString[Button::A] = "button_a";
     m_buttonToString[Button::B] = "button_b";
@@ -45,6 +47,7 @@ mstEditor::mstEditor(QWidget *parent) :
     m_buttonToString[Button::RT] = "button_rt";
     m_buttonToString[Button::START] = "button_start";
     m_buttonToString[Button::BACK] = "button_back";
+    m_buttonToString[Button::DPAD] = "button_dpad";
 
     // Unicode to russian encoding
     QString unicode = "¨ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ¸";
@@ -1195,6 +1198,7 @@ void mstEditor::AddButtonComboBox(int _insertAt, Button _button)
     // Combo box
     QComboBox* comboBox = new QComboBox();
     comboBox->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    comboBox->setMaxVisibleItems(Button::COUNT);
     pictureLayout->insertWidget(1, comboBox);
     for (int i = 0; i < Button::COUNT; i++)
     {

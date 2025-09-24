@@ -13,5 +13,6 @@
         <file>button_x.png</file>
         <file>button_y.png</file>
         <file>Nintendo_NTLG-DB_002.ttf</file>
+        <file>button_dpad.png</file>
     </qresource>
 </RCC>

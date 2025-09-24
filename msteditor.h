@@ -44,6 +44,7 @@ enum Button : int {
     RT,
     START,
     BACK,
+    DPAD,
     COUNT
 };
 
