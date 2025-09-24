@@ -715,6 +715,7 @@ void mstEditor::on_TW_TreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int co
 //---------------------------------------------------------------------------
 void mstEditor::on_TW_TreeWidget_itemMoved(int from, int to)
 {
+    m_fileEdited = true;
     m_mst.MoveEntry(static_cast<unsigned int>(from), static_cast<unsigned int>(to));
 
     if (m_id >= 0)
