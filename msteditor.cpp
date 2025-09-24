@@ -24,6 +24,8 @@ mstEditor::mstEditor(QWidget *parent) :
     m_stringToButton["button_start"] = Button::START;
     m_stringToButton["button_back"] = Button::BACK;
     m_stringToButton["button_dpad"] = Button::DPAD;
+    m_stringToButton["button_lstick"] = Button::LSTICK;
+    m_stringToButton["button_rstick"] = Button::RSTICK;
 
     m_buttonToCombo[Button::A] = "A Button";
     m_buttonToCombo[Button::B] = "B Button";
@@ -35,7 +37,9 @@ mstEditor::mstEditor(QWidget *parent) :
     m_buttonToCombo[Button::RT] = "Right Trigger";
     m_buttonToCombo[Button::START] = "Start Button";
     m_buttonToCombo[Button::BACK] = "Back Button";
-    m_buttonToCombo[Button::DPAD] = "D-Pad";
+    m_buttonToCombo[Button::DPAD] = "Directional Pad";
+    m_buttonToCombo[Button::LSTICK] = "Left Stick";
+    m_buttonToCombo[Button::RSTICK] = "Right Stick";
 
     m_buttonToString[Button::A] = "button_a";
     m_buttonToString[Button::B] = "button_b";
@@ -48,6 +52,8 @@ mstEditor::mstEditor(QWidget *parent) :
     m_buttonToString[Button::START] = "button_start";
     m_buttonToString[Button::BACK] = "button_back";
     m_buttonToString[Button::DPAD] = "button_dpad";
+    m_buttonToString[Button::LSTICK] = "button_lstick";
+    m_buttonToString[Button::RSTICK] = "button_rstick";
 
     // Unicode to russian encoding
     QString unicode = "¨ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ¸";

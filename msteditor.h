@@ -45,6 +45,8 @@ enum Button : int {
     START,
     BACK,
     DPAD,
+    LSTICK,
+    RSTICK,
     COUNT
 };
 
