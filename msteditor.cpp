@@ -470,13 +470,14 @@ void mstEditor::on_actionClose_triggered()
 //---------------------------------------------------------------------------
 void mstEditor::on_actionAbout_mstEditor_triggered()
 {
-    QString message = "mstEditor - Sonic the Hedgehog (2006) Subtitle Editor v2.1";
-    message += "\nCreated by brianuuu 2019";
-    message += "\nYoutube: brianuuuSonic Reborn";
+    QString message = "mstEditor - Sonic the Hedgehog (2006) Subtitle Editor v2.2";
+    message += "\nCreated by brianuuu 2025";
+    message += "\nYoutube: brianuuuSonic";
     message += "\nSpecial Thanks: N69vid - Beta testing, Russian mapping";
     message += "\n\nv1.0 - Initial Release";
     message += "\nv2.0 - Added Color Support";
     message += "\nv2.1 - Bug Fix on able to add color to sound before";
+    message += "\nv2.2 - Allow drag reorder, mapped d-pad";
     QMessageBox::information(this, "About mstEditor", message, QMessageBox::Ok);
 }
 
