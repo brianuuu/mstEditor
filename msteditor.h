@@ -19,6 +19,7 @@
 #include <QSettings>
 #include <QShortcut>
 #include <QSpinBox>
+#include <QTextCodec>
 #include <QTextBrowser>
 #include <QValidator>
 #include <QPainter>

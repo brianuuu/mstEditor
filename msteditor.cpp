@@ -676,16 +676,21 @@ void mstEditor::TW_AddOrReplaceEntry(mst::TextEntry entry, int _id)
     }
     item->setText(1, subtitle);
 
+    QTextCodec *codec = QTextCodec::codecForName("Shift-JIS");
+    QTextDecoder *decoder = codec->makeDecoder();
+
     QString tags;
     for(unsigned int i = 0; i < entry.m_tags.size(); i++)
     {
-        tags += QString::fromStdString(entry.m_tags[i]);
+        tags += decoder->toUnicode(entry.m_tags[i].c_str());
         if (i != entry.m_tags.size() - 1)
         {
             tags += "\n";
         }
     }
     item->setText(2, tags);
+
+    delete decoder;
 }
 
 //---------------------------------------------------------------------------
